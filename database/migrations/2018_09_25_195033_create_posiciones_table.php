@@ -15,7 +15,9 @@ class CreatePosicionesTable extends Migration
     {
         Schema::create('posiciones', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombre')->nullable();;
             $table->timestamps();
+            $table->datetime('deleted_at')->nullable();
         });
     }
 

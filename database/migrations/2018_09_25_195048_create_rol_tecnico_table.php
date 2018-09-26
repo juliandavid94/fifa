@@ -15,7 +15,9 @@ class CreateRolTecnicoTable extends Migration
     {
         Schema::create('rol_tecnico', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombre')->nullable();;
             $table->timestamps();
+            $table->datetime('deleted_at')->nullable();
         });
     }
 

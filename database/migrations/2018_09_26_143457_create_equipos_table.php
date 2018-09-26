@@ -15,7 +15,12 @@ class CreateEquiposTable extends Migration
     {
         Schema::create('equipos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string("nombre")->nullable();
+            $table->text("bandera")->nullable();
+            $table->text("escudo")->nullable();
+            $table->integer("nacionalidad_id")->nullable();
             $table->timestamps();
+            $table->datetime('deleted_at')->nullable();
         });
     }
 

@@ -15,7 +15,14 @@ class CreateTecnicoTable extends Migration
     {
         Schema::create('tecnico', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombre')->nullable();;
+            $table->string('apellidos')->nullable();;
+            $table->date('fecha_nacimiento')->nullable();;
+            $table->integer('nacionalidad_id')->nullable();;
+            $table->integer('rol_tecnico_id')->nullable();;
+            $table->integer('equipo_id')->nullable();;
             $table->timestamps();
+            $table->datetime('deleted_at')->nullable();
         });
     }
 

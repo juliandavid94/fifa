@@ -15,7 +15,9 @@ class CreateNacionalidadesTable extends Migration
     {
         Schema::create('nacionalidades', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombre')->nullable();;
             $table->timestamps();
+            $table->datetime('deleted_at')->nullable();
         });
     }
 
